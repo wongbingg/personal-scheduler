@@ -27,6 +27,7 @@
 		AF43ABB42970DE630069B1AC /* LoginCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43ABB32970DE630069B1AC /* LoginCacheManager.swift */; };
 		AF5B7510296D8FC900D184AC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B750F296D8FC900D184AC /* Observable.swift */; };
 		AF5B7515296D939200D184AC /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B7514296D939200D184AC /* ListCell.swift */; };
+		AF678F5829755AE8004AA895 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF678F5729755AE8004AA895 /* GoogleService-Info.plist */; };
 		AF8844A7296EE0FC00D16646 /* FacebookLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8844A6296EE0FC00D16646 /* FacebookLoginService.swift */; };
 		AF8844A9296EE80400D16646 /* FacebookLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8844A8296EE80400D16646 /* FacebookLoginUseCase.swift */; };
 		AF9568F1296FABD900073438 /* FirebaseAuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9568F0296FABD900073438 /* FirebaseAuthUseCase.swift */; };
@@ -40,7 +41,6 @@
 		AFCD0FD9296E97E500FDE75B /* ScheduleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD0FD8296E97E500FDE75B /* ScheduleDetailView.swift */; };
 		AFCD0FDF296EABDB00FDE75B /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFCD0FDE296EABDB00FDE75B /* FacebookCore */; };
 		AFCD0FE1296EABDB00FDE75B /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = AFCD0FE0296EABDB00FDE75B /* FacebookLogin */; };
-		AFE2B910296D3F3F004227A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFE2B90F296D3F3F004227A5 /* GoogleService-Info.plist */; };
 		AFE2B91A296D42AE004227A5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2B919296D42AE004227A5 /* SigninViewController.swift */; };
 		AFE2B91C296D44E6004227A5 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2B91B296D44E6004227A5 /* SigninViewModel.swift */; };
 		AFE2B91E296D53EF004227A5 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE2B91D296D53EF004227A5 /* LoginInfo.swift */; };
@@ -80,6 +80,7 @@
 		AF43ABB32970DE630069B1AC /* LoginCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCacheManager.swift; sourceTree = "<group>"; };
 		AF5B750F296D8FC900D184AC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		AF5B7514296D939200D184AC /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		AF678F5729755AE8004AA895 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF8844A6296EE0FC00D16646 /* FacebookLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginService.swift; sourceTree = "<group>"; };
 		AF8844A8296EE80400D16646 /* FacebookLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginUseCase.swift; sourceTree = "<group>"; };
 		AF9568F0296FABD900073438 /* FirebaseAuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthUseCase.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		AFCD0FCD296E7E0000FDE75B /* KakaoLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginService.swift; sourceTree = "<group>"; };
 		AFCD0FD6296E84FD00FDE75B /* KakaoLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginUseCase.swift; sourceTree = "<group>"; };
 		AFCD0FD8296E97E500FDE75B /* ScheduleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailView.swift; sourceTree = "<group>"; };
-		AFE2B90F296D3F3F004227A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFE2B919296D42AE004227A5 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		AFE2B91B296D44E6004227A5 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		AFE2B91D296D53EF004227A5 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
 				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
 				63AAAB0F2967EA2700775EC3 /* Info.plist */,
-				AFE2B90F296D3F3F004227A5 /* GoogleService-Info.plist */,
+				AF678F5729755AE8004AA895 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -475,8 +475,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */,
+				AF678F5829755AE8004AA895 /* GoogleService-Info.plist in Resources */,
 				63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */,
-				AFE2B910296D3F3F004227A5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
