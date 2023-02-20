@@ -9,20 +9,30 @@ import UIKit
 
 final class ScheduleSceneDIContainer {
     // MARK: - Schedule List
-    func makeScheduleListViewController(fireStoreCollectionId: String,
-                                        actions: ScheduleListViewModelActions) -> ScheduleListViewController {
-        let viewModel = makeScheduleListViewModel(fireStoreCollectionId: fireStoreCollectionId, actions: actions)
+    func makeScheduleListViewController(
+        fireStoreCollectionId: String,
+        actions: ScheduleListViewModelActions) -> ScheduleListViewController {
+            
+        let viewModel = makeScheduleListViewModel(
+            fireStoreCollectionId: fireStoreCollectionId,
+            actions: actions)
         return ScheduleListViewController(with: viewModel)
     }
     
-    func makeScheduleListViewModel(fireStoreCollectionId: String,
-                                   actions: ScheduleListViewModelActions) -> ScheduleListViewModel {
-        return DefaultScheduleListViewModel(fireStoreCollectionId: fireStoreCollectionId, actions: actions)
+    func makeScheduleListViewModel(
+        fireStoreCollectionId: String,
+        actions: ScheduleListViewModelActions) -> ScheduleListViewModel {
+            
+        return DefaultScheduleListViewModel(
+            fireStoreCollectionId: fireStoreCollectionId,
+            actions: actions)
     }
     
     // MARK: - Schedule Detail
-    func makeScheduleDetailViewController(schedule: Schedule?,
-                                          fireStoreCollectionId: String) -> ScheduleDetailViewController {
+    func makeScheduleDetailViewController(
+        schedule: Schedule?,
+        fireStoreCollectionId: String) -> ScheduleDetailViewController {
+            
         let viewModel = makeScheduleDetailViewModel(
             with: schedule,
             fireStoreCollectionId: fireStoreCollectionId

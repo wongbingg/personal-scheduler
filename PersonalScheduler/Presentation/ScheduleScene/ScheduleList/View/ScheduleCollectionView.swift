@@ -59,8 +59,12 @@ final class ScheduleCollectionView: UICollectionView {
         return UICollectionViewCompositionalLayout(sectionProvider: sectionProvider)
     }
     
-    private func trailingSwipeActionConfigurationForListCellItem(_ item: Schedule) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "delete") { [weak self] (_, _, completion) in
+    private func trailingSwipeActionConfigurationForListCellItem(
+        _ item: Schedule) -> UISwipeActionsConfiguration? {
+            
+        let deleteAction = UIContextualAction(
+            style: .destructive, title: "delete") { [weak self] (_, _, completion) in
+                
             self?.deleteData(with: [item])
             Task {
                 try await self?.viewModel.deleteSchedule(item)
@@ -70,7 +74,9 @@ final class ScheduleCollectionView: UICollectionView {
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
   
-    private func configureDataSource<T: UICollectionViewCell>(with cellRegistration: UICollectionView.CellRegistration<T, Schedule>) {
+    private func configureDataSource<T: UICollectionViewCell>(
+        with cellRegistration: UICollectionView.CellRegistration<T, Schedule>) {
+            
         scheduleDataSource = createDataSource(with: cellRegistration)
         snapshot.appendSections([.main])
         scheduleDataSource?.apply(snapshot, animatingDifferences: false)
@@ -83,10 +89,20 @@ final class ScheduleCollectionView: UICollectionView {
         return cellRegistration
     }
     
-    private func createDataSource<T: UICollectionViewCell>(with cellRegistration: UICollectionView.CellRegistration<T, Schedule>) -> UICollectionViewDiffableDataSource<Section, Schedule>? {
+    private func createDataSource<T: UICollectionViewCell>(
+        with cellRegistration: UICollectionView.CellRegistration<T, Schedule>
+    ) -> UICollectionViewDiffableDataSource<Section, Schedule>? {
+        
         let dataSource = UICollectionViewDiffableDataSource<Section, Schedule>(collectionView: self) {
-            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Schedule) -> UICollectionViewCell? in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            
+            (collectionView: UICollectionView,
+             indexPath: IndexPath,
+             itemIdentifier: Schedule) -> UICollectionViewCell? in
+            
+            return collectionView.dequeueConfiguredReusableCell(
+                using: cellRegistration,
+                for: indexPath,
+                item: itemIdentifier)
         }
         return dataSource
     }

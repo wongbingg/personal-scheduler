@@ -9,7 +9,10 @@ struct FirebaseAuthUseCase {
     private let firebaseAuthService = FirebaseAuthService()
     
     func fetchUserEmail(from loginInfo: LoginInfo) async throws -> String {
-        guard let authDataResult = try await firebaseAuthService.createUser(email: loginInfo.id, password: loginInfo.password) else {
+        guard let authDataResult = try await firebaseAuthService.createUser(
+            email: loginInfo.id,
+            password: loginInfo.password) else {
+            
             throw FirebaseAuthServiceError.createUserError
         }
         return authDataResult.user.email!
@@ -17,7 +20,10 @@ struct FirebaseAuthUseCase {
     
     func fetchUserUID(from loginInfo: LoginInfo) async throws -> String {
         
-        guard let authDataResult = try await firebaseAuthService.signIn(email: loginInfo.id, password: loginInfo.password) else {
+        guard let authDataResult = try await firebaseAuthService.signIn(
+            email: loginInfo.id,
+            password: loginInfo.password) else {
+            
             throw FirebaseAuthServiceError.signInError
         }
         return authDataResult.user.uid   

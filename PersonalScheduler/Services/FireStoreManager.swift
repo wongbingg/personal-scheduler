@@ -45,7 +45,9 @@ final class FireStoreManager: RemoteDataBaseProtocol {
     }
     
     func read() async throws -> [Schedule] {
-        let querySnapshot = try await dataBase.collection(fireStoreCollectionId).getDocuments()
+        let querySnapshot = try await dataBase
+            .collection(fireStoreCollectionId)
+            .getDocuments()
         var scheduleList: [Schedule] = []
         querySnapshot.documents.forEach { document in
             let data = document.data()

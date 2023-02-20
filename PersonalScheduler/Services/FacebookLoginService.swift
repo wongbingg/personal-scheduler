@@ -20,7 +20,8 @@ final class FacebookLoginService {
     }
     
     func login(in viewController: UIViewController, _ completion: @escaping () -> Void) {
-        loginManager.logIn(permissions: ["public_profile", "email"], from: viewController) { result, error in
+        loginManager.logIn(permissions: ["public_profile", "email"],
+                           from: viewController) { result, error in
             if let error = error {
                 print(error)
             } else if let result = result, result.isCancelled {

@@ -48,7 +48,9 @@ final class LoginSceneDIContainer {
     }
     
     // MARK: - Login Flow Coordinator
-    func makeLoginFlowCoordinator(navigationController: UINavigationController) -> LoginFlowCoordinator {
+    func makeLoginFlowCoordinator(
+        navigationController: UINavigationController) -> LoginFlowCoordinator {
+            
         return LoginFlowCoordinator(
             navigationController: navigationController,
             dependencies: self

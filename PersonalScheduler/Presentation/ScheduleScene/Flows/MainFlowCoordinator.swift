@@ -8,10 +8,13 @@
 import UIKit
 
 protocol MainFlowCoordinatorDependencies {
-    func makeScheduleListViewController(fireStoreCollectionId: String,
-                                        actions: ScheduleListViewModelActions) -> ScheduleListViewController
-    func makeScheduleDetailViewController(schedule: Schedule?,
-                                          fireStoreCollectionId: String) -> ScheduleDetailViewController
+    func makeScheduleListViewController(
+        fireStoreCollectionId: String,
+        actions: ScheduleListViewModelActions) -> ScheduleListViewController
+    
+    func makeScheduleDetailViewController(
+        schedule: Schedule?,
+        fireStoreCollectionId: String) -> ScheduleDetailViewController
 }
 
 final class MainFlowCoordinator: Coordinator {

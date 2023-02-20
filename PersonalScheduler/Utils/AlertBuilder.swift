@@ -10,11 +10,24 @@ import UIKit
 final class AlertBuilder {
     private var alertController: UIAlertController
 
-    init(title: String? = nil, message: String? = nil, preferredStyle: UIAlertController.Style) {
-        alertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle)
+    init(
+        title: String? = nil,
+        message: String? = nil,
+        preferredStyle: UIAlertController.Style
+    ) {
+        alertController = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: preferredStyle
+        )
     }
 
-    func setButton(name: String, style: UIAlertAction.Style, _ completion: (() -> Void)? = nil) -> AlertBuilder {
+    func setButton(
+        name: String,
+        style: UIAlertAction.Style,
+        _ completion: (() -> Void)? = nil
+    ) -> AlertBuilder {
+        
         let button = UIAlertAction(title: name, style: style) { alertAction in
             completion?()
         }

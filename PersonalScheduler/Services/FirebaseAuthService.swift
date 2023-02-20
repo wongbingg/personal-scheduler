@@ -11,7 +11,10 @@ final class FirebaseAuthService {
     
     func createUser(email: String, password: String) async throws -> AuthDataResult? {
         do {
-            let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            let authDataResult = try await Auth.auth().createUser(
+                withEmail: email,
+                password: password
+            )
             return authDataResult
         } catch {
             print(error)
@@ -21,7 +24,10 @@ final class FirebaseAuthService {
     
     func signIn(email: String, password: String) async throws -> AuthDataResult? {
         do {
-            let authDataResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            let authDataResult = try await Auth.auth().signIn(
+                withEmail: email,
+                password: password
+            )
             return authDataResult
         } catch {
             print(error)
