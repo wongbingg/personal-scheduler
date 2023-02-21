@@ -63,7 +63,6 @@ final class LoginFlowCoordinator: Coordinator {
     }
     
     private func signinButtonTapped() {
-        print("회원가입 버튼 탭 !")
         let signinVC = dependencies.makeSigninViewController()
         navigationController.pushViewController(signinVC, animated: true)
     }

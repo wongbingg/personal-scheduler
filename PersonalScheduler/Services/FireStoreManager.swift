@@ -32,7 +32,8 @@ final class FireStoreManager: RemoteDataBaseProtocol {
     func create(_ schedule: Schedule) async throws {
         do {
             try await dataBase.collection(fireStoreCollectionId)
-                .document(schedule.id.uuidString).setData([
+                .document(schedule.id.uuidString)
+                .setData([
                 "title": schedule.title,
                 "body": schedule.body,
                 "startDate": schedule.startDate,
@@ -81,8 +82,10 @@ final class FireStoreManager: RemoteDataBaseProtocol {
     
     func delete(_ schedule: Schedule) async throws {
         do {
-            try await dataBase.collection(fireStoreCollectionId)
-                .document(schedule.id.uuidString).delete()
+            try await dataBase
+                .collection(fireStoreCollectionId)
+                .document(schedule.id.uuidString)
+                .delete()
             print("success delete")
         } catch let error {
             print(error)
