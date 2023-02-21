@@ -25,6 +25,7 @@
 		AF14CCE8296C0E0B001FD1CC /* LabelSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14CCE7296C0E0B001FD1CC /* LabelSeparator.swift */; };
 		AF14CCEB296C29C7001FD1CC /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14CCEA296C29C7001FD1CC /* UITextField+.swift */; };
 		AF43ABB42970DE630069B1AC /* LoginCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF43ABB32970DE630069B1AC /* LoginCacheManager.swift */; };
+		AF59584729A48467005B99FE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF59584629A48467005B99FE /* RxSwift */; };
 		AF5B7510296D8FC900D184AC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B750F296D8FC900D184AC /* Observable.swift */; };
 		AF5B7515296D939200D184AC /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5B7514296D939200D184AC /* ListCell.swift */; };
 		AF678F5829755AE8004AA895 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF678F5729755AE8004AA895 /* GoogleService-Info.plist */; };
@@ -114,6 +115,7 @@
 				AFE2B942296D8A43004227A5 /* FirebaseFirestore in Frameworks */,
 				AFCD0FD5296E7E9F00FDE75B /* KakaoSDKUser in Frameworks */,
 				AFCD0FE1296EABDB00FDE75B /* FacebookLogin in Frameworks */,
+				AF59584729A48467005B99FE /* RxSwift in Frameworks */,
 				AFCD0FD1296E7E9F00FDE75B /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +428,7 @@
 				AFCD0FD4296E7E9F00FDE75B /* KakaoSDKUser */,
 				AFCD0FDE296EABDB00FDE75B /* FacebookCore */,
 				AFCD0FE0296EABDB00FDE75B /* FacebookLogin */,
+				AF59584629A48467005B99FE /* RxSwift */,
 			);
 			productName = PersonalScheduler;
 			productReference = 63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */;
@@ -459,6 +462,7 @@
 				AFE2B911296D4009004227A5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				AFCD0FCF296E7E9F00FDE75B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				AFCD0FDD296EABDB00FDE75B /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				AF59584529A48467005B99FE /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 63AAAAFF2967EA2600775EC3 /* Products */;
 			projectDirPath = "";
@@ -736,6 +740,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AF59584529A48467005B99FE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		AFCD0FCF296E7E9F00FDE75B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -763,6 +775,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AF59584629A48467005B99FE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF59584529A48467005B99FE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		AFCD0FD0296E7E9F00FDE75B /* KakaoSDKAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AFCD0FCF296E7E9F00FDE75B /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
